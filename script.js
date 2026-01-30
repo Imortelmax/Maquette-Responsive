@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Gestion des menus déroulants
     const buttons = document.querySelectorAll('.button');
 
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.stopPropagation();
-            const parent = this.closest('li');
-            const menuItems = parent.querySelectorAll('.menu');
+            const parent = this.closest('.has-dropdown');
+            const dropdownMenu = parent.querySelector('.dropdown-menu');
 
-            menuItems.forEach(item => {
-                if (item.style.display === 'none' || item.style.display === '') {
-                    item.style.display = 'block';
+            if (dropdownMenu) {
+                if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                    // Fermer tous les autres menus d'abord
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.style.display = 'none';
+                    });
+                    dropdownMenu.style.display = 'flex';
                 } else {
-                    item.style.display = 'none';
+                    dropdownMenu.style.display = 'none';
                 }
-            });
+            }
 
             // Rotation de la flèche
             const img = this.querySelector('img');
@@ -25,9 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fermer les menus en cliquant ailleurs
     document.addEventListener('click', function() {
-        const allMenuItems = document.querySelectorAll('.menu');
-        allMenuItems.forEach(item => {
-            item.style.display = 'none';
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.display = 'none';
         });
 
         const allArrows = document.querySelectorAll('.button img');
@@ -35,4 +39,46 @@ document.addEventListener('DOMContentLoaded', function() {
             arrow.style.transform = 'rotate(0deg)';
         });
     });
+
+    // Gestion du carrousel
+    const images = document.querySelectorAll('.carrousel img');
+    const leftArrow = document.getElementById('left-arrow');
+    const rightArrow = document.getElementById('right-arrow');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.style.display = i === index ? 'block' : 'none';
+        });
+        // Mettre à jour les points
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+
+    if (leftArrow) {
+        leftArrow.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+    }
+
+    if (rightArrow) {
+        rightArrow.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    }
+
+    // Clic sur les points pour changer d'image
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', function() {
+            currentIndex = i;
+            showImage(currentIndex);
+        });
+    });
+
+    // Afficher la première image au chargement
+    showImage(0);
 });
