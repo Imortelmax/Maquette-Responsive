@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    line-height: 140%;
+}
+
+p {
+    font-size: smaller;
+}
+
+/* header */
+/* logo */
+#logo {
+    background-color: #ccffff;
+}
+
+/* navbar */
+nav {
+    background-color: #9a99ff;
+    font-weight: bold;
+}
+
+#logo-safy {
+    display: flex;
+    /* justify-content: center; */
+    padding: 2% 0 0 0;
+}
+
+#safy {
+    margin-bottom: 5%;
+    width: 250px;
+    height: 70px;
+    background-size: 100%;
+    background-image: url("./assets/18.jpg.png");
+    background-repeat: no-repeat;
+}
+
+.book {
+    display: none;
+}
+
+.dest {
+    display: none;
+}
+
+.button {
+    display: flex;
+    margin: 1%;
+    background: inherit;
+    border: none;
+}
+
+/* Carroussel */
+.carrousel {
+    background-color: lightblue;
+    display: inline-flex;
+    padding: 5% 10% 5% 10%;
+}
+
+#left-arrow {
+    width: 45px;
+    height: 45px;
+    background-image: url('./assets/2.png');
+    z-index: 100;
+}
+
+.carrousel img {
+    width: 80%;
+    height: 50%;
+}
+
+#right-arrow {
+    width: 45px;
+    height: 45px;
+    background-image: url('./assets/2.png');
+    background-position: -45px 0px;
+    background-repeat: no-repeat;
+}
+
+#carrousel-btn {
+    width: 160px;
+    height: 20px;
+    background-image: url("./assets/1.png");
+}
+
+/* Content */
+#content p {
+    text-align: justify;
+}
+
+.purple-box {
+    display: flex;
+    background-color: #9a99ff;
+    color: white;
+    padding: 2%;
+    line-height: 140%;
+}
+
+.purple-box h3 {
+    padding: 0% 0% 2% 2%;
+}
+
+.more-info {
+    color: red;
+}
+
+/* Destination */
+#destinations {
+    padding: 5% 10% 2% 10%;
+    margin-bottom: 3%;
+}
+
+#title {
+    margin-bottom: 3%;
+}
+
+.flags {
+    margin: 5% 1% 2%;
+    padding: 1%;
+    border: 1px solid lightgray;
+}
+
+/* Content Footer */
+#footer {
+    padding: 5% 10% 5% 10%;
+    background-color: #ccffff;
+}
+
+#footer h3 {
+    margin-bottom: 2%;
+} 
+
+#footer p {
+    margin: 7% 0 7% 0;
+}
+
+#why {
+    margin: 5% 0 5% 0;
+}
+
+#why p {
+    padding: 2%;
+    margin: 0;
+}
+
+#checkmark, #map, #bike {
+    display: flex;
+    margin: 2% 0 0 0;
+}
+
+#travel p {
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+#travel {
+    display: flex;
+    flex-direction: column;
+}
+
+#subscribe {
+    justify-content: start;
+    margin: 0;
+    width: 25%;
+    background-color: rgb(92, 201, 92);
+    padding: 2% 3%;
+    border: 1px solid black;
+    border-radius: 7%;
+    color: white;
+}
+
+footer {
+    padding: 10%;
+    background-color: #9a99ff;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    font-size: smaller;
+    font-weight: bold;
+    margin-right: 10%;
+}
+
+#credit {
+    margin-top: 3%;
+    font-size: x-small;
+    color: lightgray;
+}
+
+/* La barre qui sépare les blocks */
+span {
+    display: block;
+    height: none;
+}
+.splitscreen {
+    border: solid 1px black;
+}
+.barre-blanche {
+    border: solid 0.5px white;
+}
+.barre-grise {
+    border: solid 1px lightgray;
+}
+
+/* responsive petit telephone 0 => 365px*/
+@media screen and (max-width: 365px) {
+    * {
+        margin: 0px;
+        padding: 0;
+    }
+
+    #logo {
+        padding: 1em;
+    }
+}
+
+/* responsive grand telephone 370px => 767px*/
+@media screen and (min-width: 370px) and (max-width: 767px) {
+    * {
+        padding: 0;
+    }
+
+    /* header */
+    /* logo */
+    #logo {
+        padding: 1em;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    /* navbar */
+    nav {
+        padding: 1em 15% 3em;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    nav p {
+        padding: 0.5em 0.5em;
+    }
+
+    button {
+        float: right;
+        margin: 0.6em;
+        padding: 0 0.2em 0 0.2em; 
+    }
+
+    /* carroussel */
+    #carrousel {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .purple-box {
+        margin: 5% 10% 0 10%;
+    }
+
+    .blabla {
+        margin: 5% 10% 0 10%;
+    }
+
+    #brazil-flag, #algeria-flag {
+        display: none;
+    }
+}
+
+/* responsive tablette 768px => 1365px*/
+@media screen and (min-width: 768px) and (max-width: 1365px) {
+    * {
+        margin: 0px;
+        padding: 0;
+    }
+
+    #logo {
+        padding: 1em;
+    }
+}
