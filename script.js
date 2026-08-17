@@ -9,14 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const dropdownMenu = parent.querySelector('.dropdown-menu');
 
             if (dropdownMenu) {
-                if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
-                    // Fermer tous les autres menus d'abord
-                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                        menu.style.display = 'none';
-                    });
+                const isOpen = dropdownMenu.style.display === 'flex';
+
+                // Fermer tous les autres menus d'abord
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+                document.querySelectorAll('.button').forEach(btn => {
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+
+                if (!isOpen) {
                     dropdownMenu.style.display = 'flex';
-                } else {
-                    dropdownMenu.style.display = 'none';
+                    this.setAttribute('aria-expanded', 'true');
                 }
             }
 
@@ -32,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function() {
         document.querySelectorAll('.dropdown-menu').forEach(menu => {
             menu.style.display = 'none';
+        });
+        document.querySelectorAll('.button').forEach(btn => {
+            btn.setAttribute('aria-expanded', 'false');
         });
 
         const allArrows = document.querySelectorAll('.button img');

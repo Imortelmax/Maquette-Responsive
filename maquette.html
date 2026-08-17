@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
-        <meta charset = "UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Maquette Responsive</title>
+        <title>Safy — Book your next trip: France, Brazil, Algeria</title>
+        <meta name="description" content="Safy is a travel booking site: browse destinations in France, Brazil and Algeria, compare prices and set up trip alerts.">
         <link href="style.css" rel="stylesheet">
-        <script src="./script.js"></script>
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <header>
             <div id="logo">
-                <img src="./assets/20.png" alt="logo facebook">
-                <img src="./assets/19.png" alt="logo twitter">
+                <img src="./assets/20.png" alt="Facebook">
+                <img src="./assets/19.png" alt="Twitter">
             </div>
         </header>
         <span class="splitscreen"></span>
         <nav>
             <div id="logo-safy">
-                <div id="safy"></div>
+                <h1 id="safy"><span class="sr-only">Safy</span></h1>
             </div>
             <div id="navbar">
                 <ul>
@@ -25,7 +26,7 @@
                     <li><p>Home</p></li>
                     <span class="barre-blanche"></span>
                     <li class="has-dropdown">
-                        <p class="test">Book<button class="button un"><img src="./assets/trier.png" alt="arrow" width="7px"/></button></p>
+                        <p class="test">Book<button class="button un" type="button" aria-expanded="false" aria-label="Show booking destinations"><img src="./assets/trier.png" alt="" width="7px"/></button></p>
                         <ul class="dropdown-menu book-menu">
                             <li class="menu book"><p>France</p></li>
                             <li class="menu book"><p>Brazil</p></li>
@@ -34,7 +35,7 @@
                         <span class="barre-blanche"></span>
                     </li>
                     <li class="has-dropdown">
-                        <p class="test">Destinations<button class="button deux"><img src="./assets/trier.png" alt="arrow" width="7px"/></button></p>
+                        <p class="test">Destinations<button class="button deux" type="button" aria-expanded="false" aria-label="Show destinations"><img src="./assets/trier.png" alt="" width="7px"/></button></p>
                         <ul class="dropdown-menu dest-menu">
                             <li class="menu dest"><p>France</p></li>
                             <li class="menu dest"><p>Brazil</p></li>
@@ -54,46 +55,46 @@
             <span class="splitscreen"></span>
             <div>
                 <div class="carrousel">
-                    <div id="left-arrow"></div>
-                    <img src="./assets/6.jpg">
-                    <img src="./assets/7.jpg">
-                    <img src="./assets/8.jpg">
-                    <img src="./assets/9.jpg">
-                    <img src="./assets/10.jpg">
-                    <img src="./assets/11.jpg">
-                    <div id="right-arrow"></div>
+                    <button id="left-arrow" type="button" aria-label="Previous image"></button>
+                    <img src="./assets/6.jpg" alt="A woman watching a plane take off through an airport window, captioned &quot;5 Travel Safety Tips&quot;">
+                    <img src="./assets/7.jpg" alt="A woman in a blue dress swinging a suitcase on a dirt road between wheat fields">
+                    <img src="./assets/8.jpg" alt="A climber hanging from an overhanging cliff above the sea">
+                    <img src="./assets/9.jpg" alt="A traveller photographing an ornate golden door">
+                    <img src="./assets/10.jpg" alt="Women carrying calabashes on their heads along a roadside">
+                    <img src="./assets/11.jpg" alt="A surfer diving underwater with their board beneath a breaking wave">
+                    <button id="right-arrow" type="button" aria-label="Next image"></button>
                 </div>
                 <div id="carrousel-btn">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+                        <button class="dot" type="button" aria-label="Show image 1"></button>
+                        <button class="dot" type="button" aria-label="Show image 2"></button>
+                        <button class="dot" type="button" aria-label="Show image 3"></button>
+                        <button class="dot" type="button" aria-label="Show image 4"></button>
+                        <button class="dot" type="button" aria-label="Show image 5"></button>
+                        <button class="dot" type="button" aria-label="Show image 6"></button>
                     </div>
             </div>
             <span class="splitscreen"></span>
             <article id="content">
                 <div id="contexte">
                     <div class="purple-box">
-                        <img src="./assets/13.png" alt="firecamp" />
-                        <h3>Safe, structured and amazing application</h3>
+                        <img src="./assets/13.png" alt="" />
+                        <h2>Safe, structured and amazing application</h2>
                     </div>
                     <div class="blabla">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id ligula in ipsum vulputate voluptat at ut nisi. Aliquam erat voluptat. Maecenas pretium dolor vitae lectus fermentum convallis bibendum in erat. Donec vitae risus non lorem voluptat fingilla in in metus. Aenean quis eros diam. Proin porta quam at neque congue lacullis.</p>
                         <p class="more-info">more info</p>
                     </div>
                     <div class="purple-box">
-                        <img src="./assets/17.png" alt="house" />
-                        <h3>The sun is shining today, book your trip</h3>
+                        <img src="./assets/17.png" alt="" />
+                        <h2>The sun is shining today, book your trip</h2>
                     </div>
                     <div class="blabla">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id ligula in ipsum vulputate voluptat at ut nisi. Aliquam erat voluptat. Maecenas pretium dolor vitae lectus fermentum convallis bibendum in erat. Donec vitae risus non lorem voluptat fingilla in in metus. Aenean quis eros diam. Proin porta quam at neque congue lacullis.</p>
                         <p class="more-info">more info</p>
                     </div>
                     <div class="purple-box">
-                        <img src="./assets/12.png" alt="bear-paw" />
-                        <h3>Meet new people and live more intensely</h3>
+                        <img src="./assets/12.png" alt="" />
+                        <h2>Meet new people and live more intensely</h2>
                     </div>
                     <div class="blabla">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id ligula in ipsum vulputate voluptat at ut nisi. Aliquam erat voluptat. Maecenas pretium dolor vitae lectus fermentum convallis bibendum in erat. Donec vitae risus non lorem voluptat fingilla in in metus. Aenean quis eros diam. Proin porta quam at neque congue lacullis.</p>
@@ -101,19 +102,19 @@
                     </div>
                 </div>
                 <div id="destinations">
-                    <h3 id="title">Destinations</h3>
+                    <h2 id="title">Destinations</h2>
                     <span class="barre-grise"></span>
                     <div id="flag">
                         <div id="france-flag">
-                            <img src="./assets/3.jpg" alt="france-flag" class="flags" height="240px" width="350px"/>
+                            <img src="./assets/3.jpg" alt="The French flag" class="flags" height="240px" width="350px"/>
                             <p><strong>France</strong></p>
                         </div>
                         <div id="brazil-flag">
-                            <img src="./assets/4.jpg" alt="brazil-flag" class="flags"/>
+                            <img src="./assets/4.jpg" alt="The Brazilian flag" class="flags"/>
                             <p class="brazil-flag"><strong>Brazil</strong></p>
                         </div>
                         <div id="algeria-flag">
-                            <img src="./assets/5.jpg" alt="algeria-flag" class="flags"/>
+                            <img src="./assets/5.jpg" alt="The Algerian flag" class="flags"/>
                             <p><strong>Algeria</strong></p>
                         </div>
                     </div>
@@ -121,35 +122,35 @@
                 <span class="splitscreen"></span>
                 <div id="footer">
                     <div id="about-section">
-                        <h3>About Us</h3>
+                        <h2>About Us</h2>
                         <span class="barre-grise"></span>
                         <p>Lorem ipsum dolor sit amet, consecteur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo. Proin et porta ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo. Proin et porta ligula.</p>
                         <p>Quisque malesuada lorem at leo voluptat tristique. Nunc sit amet felis imperdiet ante tincidunt viverra sit amet quis ipsum. Aenean metus urna. Sed blanditnunc eget lorem vestibulum malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo. Proin et porta ligula. Quisque malesuada lorem at leo voluptat trstique. Nunc sit amet felis imperdiet ante tincidunt viverra sit amet quis ipsum.</p>
                     </div>
                     <div id="why-section">
-                        <h3>Why Us</h3>
+                        <h2>Why Us</h2>
                         <span class="barre-grise"></span>
                         <div id="why">
                             <div id="checkmark">
-                                <img src="./assets/14.png" alt="checkmark" />
+                                <img src="./assets/14.png" alt="" />
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo.</p>
                             </div>
                             <div id="map">
-                                <img src="./assets/15.png" alt="map" />
+                                <img src="./assets/15.png" alt="" />
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo.</p>
                             </div>
                             <div id="bike">
-                                <img src="./assets/16.png" alt="bike" />
+                                <img src="./assets/16.png" alt="" />
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo.</p>
                             </div>
                         </div>
                     </div>
                     <div id="travel">
-                        <h3>How to travel ?</h3>
+                        <h2>How to travel ?</h2>
                         <span class="barre-grise"></span>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus convallis urna a enim convallis a bibendum lectus sclerisque. Aenean at mauris augue, sed fringilla justo. Proin et porta ligula.
                         </p>
-                        <button id="subscribe">Subscribe</button>
+                        <button id="subscribe" type="button">Subscribe</button>
                     </div>
                 </div>
             </article>
